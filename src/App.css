@@ -1,0 +1,16 @@
+.navbar {
+  padding: 20px;
+  background-color: #f3f3f5;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
