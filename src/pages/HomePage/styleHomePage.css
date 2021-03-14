@@ -1,0 +1,17 @@
+.div-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #292929;
+    width: 375px;
+}
+button.ui.button {
+    background: #FFCE00;
+    color: black;
+    width: 181px;
+}
+.fields.logo {
+    justify-content: center;
+    margin-bottom: 20px !important;
+}

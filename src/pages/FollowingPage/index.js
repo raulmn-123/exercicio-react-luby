@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./styleFollowing.css";
+import "./styleFollowingPage.css";
 import {Link} from 'react-router-dom'
 
 function FollowingPage() {
@@ -22,8 +22,8 @@ function FollowingPage() {
     }, [])
   return (
     <div className="conteudo-principal">
-      <header>
-        <a className="botao-voltar">Voltar</a>
+      <header className="header-following">
+        <a className="botao-voltar" href="/user">Voltar</a>
         <h2 className="qtd-seguidores">{user.following} seguindo</h2>
       </header>
       <ul className="lista-seguidores">

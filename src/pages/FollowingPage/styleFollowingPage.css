@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #1F1F1F;
+    height: 100px;
+}
+h2.qtd-seguidores {
+    width: 375px;
+    text-align: center;
+}
+header.header-following {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}

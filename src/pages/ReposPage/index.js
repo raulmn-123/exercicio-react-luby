@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./style.css";
+import "./styleReposPage.css";
 import {Link} from 'react-router-dom'
 
 function ReposPage() {
@@ -22,16 +22,16 @@ function ReposPage() {
   }, []);
 
   return (
-    <div className="conteudo-principal">
-      <header>
-        <a className="botao-voltar">Voltar</a>
-        <h2>{user.public_repos} repositórios</h2>
+    <div className="conteudo-principal" style={{height: repos.length * 110}}>
+      <header className="header-repos">
+        <a className="botao-voltar" href="/user">Voltar</a>
+        <h2 className="qtd-repos">{user.public_repos} repositórios</h2>
       </header>
-      <ul className="lista-repos">
+      <ul className="lista-repos" >
         {repos.map((repo) => {
           return (
             <li className="item-repositorio">
-              <a href={repo.svn_url}><h3>{repo.name}</h3></a>
+              <a href={repo.svn_url}><h3 className="repo-name">{repo.name}</h3></a>
               <div className="descricao-repositorio">
                 {repo.description}
               </div>

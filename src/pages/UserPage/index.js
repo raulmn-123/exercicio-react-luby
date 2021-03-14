@@ -1,4 +1,4 @@
-import "./style.css";
+import "./styleUserPage.css";
 import React, { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
 
@@ -19,7 +19,7 @@ function UserPage() {
         <p className="title-usuario">
           #{user.login}
         </p>
-               <a className="sair">
+               <a className="sair" href="/">
           Sair
         </a>
       </header>
@@ -36,22 +36,22 @@ function UserPage() {
         </div>
         <div className="info-repositorios-usuario">
           <span className="seguidores-usuario">
-            <h3>{user.followers ? user.followers : ''}</h3><p>Seguidores</p>
+            <h3>{user.followers ? user.followers : '0'}</h3><p>Seguidores</p>
           </span>
           <span className="seguindo-usuario">
-            <h3>{user.following ? user.following : ''}</h3><p>Seguindo</p>
+            <h3>{user.following ? user.following : '0'}</h3><p>Seguindo</p>
           </span>
           <span className="repos-usuario">
-            <h3>{user.public_repos ? user.public_repos : ''}</h3><p>Repositórios</p>
+            <h3>{user.public_repos ? user.public_repos : '0'}</h3><p>Repositórios</p>
           </span>
         </div>
         
-        <div>
+        <div className="bio-usuario">
         <h2 className="title-bio">BIO</h2>
-        </div>
-        <section className="bio-usuario">   
+        <div className="text-bio">
         {user.bio ? user.bio : ''}
-        </section>
+        </div>
+        </div>
       </main>
       <nav className="barra-navegação">
         <Link to="/">Home</Link>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Form, Card, Icon } from "semantic-ui-react";
+import { Form } from "semantic-ui-react";
 import axios from "axios";
-import "./style.css";
+import "./styleHomePage.css";
 import logo from './logotipo-do-github.png'
 import { useHistory } from "react-router-dom";
 
@@ -35,7 +35,7 @@ export default function HomePage() {
       
       <div className="div-principal">
         <Form onSubmit={handleSubmit}>
-            <Form.Group>
+            <Form.Group className="logo">
             <img className="logo" src={logo} />
             </Form.Group>
             
@@ -44,6 +44,7 @@ export default function HomePage() {
               placeholder="Usuário"
               name="name"
               onChange={handleSearch}
+              required
             ></Form.Input>
             </Form.Group>
             <Form.Group>

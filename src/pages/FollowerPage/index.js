@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import './style.css'
+import './styleFollowerPage.css'
 import axios from 'axios'
 import {useParams, Link} from 'react-router-dom'
 function FollowerPage(){
@@ -27,10 +27,10 @@ function FollowerPage(){
         <div className="conteudo-principal">
       <header className="header-usuario">
         <p className="title-usuario">
-        {follower.login}
+        #{follower.login}
         </p>
-               <a className="sair">
-          Salvar
+               <a className="sair" href="/user">
+          Voltar
         </a>
       </header>
       <div className="div-logo">
@@ -58,10 +58,11 @@ function FollowerPage(){
         
         <div>
         <h2 className="title-bio">BIO</h2>
-        </div>
+        
         <section className="bio-usuario">   
         {follower.bio ? follower.bio : ''}
         </section>
+        </div>
       </main>
       <nav className="barra-navegação">
       <Link to="/">Home</Link>

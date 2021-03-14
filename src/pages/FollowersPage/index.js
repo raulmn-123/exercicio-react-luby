@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./style.css";
+import "./styleFollowersPage.css";
 import {Link} from 'react-router-dom'
 
 function FollowersPage() {
@@ -22,8 +22,8 @@ function FollowersPage() {
     }, [])
   return (
     <div className="conteudo-principal">
-      <header>
-        <a className="botao-voltar">Voltar</a>
+      <header className="header-followers">
+        <a className="botao-voltar" href="/user">Voltar</a>
         <h2 className="qtd-seguidores">{user.followers} seguidores</h2>
       </header>
       <ul className="lista-seguidores">
@@ -34,7 +34,7 @@ function FollowersPage() {
               <img src={follower.avatar_url}></img>
             </div>
             <div className="nome-seguidor">
-              <h3>{follower.login}</h3>
+              <h3>#{follower.login}</h3>
               
             </div>
             
