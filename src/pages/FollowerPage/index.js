@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './style.css'
-import logo from './logotipo-do-github.png'
 import axios from 'axios'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 function FollowerPage(){
 
     const {login} = useParams()
@@ -65,10 +64,10 @@ function FollowerPage(){
         </section>
       </main>
       <nav className="barra-navegação">
-        <a>Home</a>
-        <a>Repos</a>
-        <a>Seguidores</a>
-        <a>Seguindo</a>
+      <Link to="/">Home</Link>
+        <Link to="/repos">Repos</Link>
+        <Link to="/followers">Seguidores</Link>
+        <Link to="/following">Seguindo</Link>
       </nav>
     </div>
     )

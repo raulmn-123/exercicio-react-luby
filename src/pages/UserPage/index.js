@@ -57,7 +57,7 @@ function UserPage() {
         <Link to="/">Home</Link>
         <Link to="/repos">Repos</Link>
         <Link to="/followers">Seguidores</Link>
-        <Link to="/follower">Seguindo</Link>
+        <Link to="/following">Seguindo</Link>
       </nav>
     </div>
   )

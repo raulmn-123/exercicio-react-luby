@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./style.css";
+import {Link} from 'react-router-dom'
 
 function ReposPage() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -34,16 +35,16 @@ function ReposPage() {
               <div className="descricao-repositorio">
                 {repo.description}
               </div>
-              <div className="qtd-estrelas">{repo.stargazers_count}estrelas</div>
+              <div className="qtd-estrelas">{repo.stargazers_count} estrelas</div>
             </li>
           );
         })}
       </ul>
       <nav className="barra-navegação">
-        <a>Home</a>
-        <a>Repos</a>
-        <a>Seguidores</a>
-        <a>Seguindo</a>
+      <Link to="/">Home</Link>
+        <Link to="/repos">Repos</Link>
+        <Link to="/followers">Seguidores</Link>
+        <Link to="/following">Seguindo</Link>
       </nav>
     </div>
   );
