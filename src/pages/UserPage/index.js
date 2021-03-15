@@ -1,8 +1,7 @@
 import "./styleUserPage.css";
 import React, { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
-
-
+import {AiOutlineHome,FiGithub,IoPeopleOutline, IoExitOutline} from 'react-icons/all'
 function UserPage() {
 
   const [user, setUser] = useState({});
@@ -15,12 +14,13 @@ function UserPage() {
 
   return (
     <div className="conteudo-principal">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
       <header className="header-usuario">
         <p className="title-usuario">
           #{user.login}
         </p>
-               <a className="sair" href="/">
-          Sair
+               <a className="sair" href="/" >
+          <IoExitOutline/>
         </a>
       </header>
       <div className="div-logo">
@@ -54,10 +54,10 @@ function UserPage() {
         </div>
       </main>
       <nav className="barra-navegação">
-        <Link to="/">Home</Link>
-        <Link to="/repos">Repos</Link>
-        <Link to="/followers">Seguidores</Link>
-        <Link to="/following">Seguindo</Link>
+      <Link to="/"><AiOutlineHome/>Home</Link>
+        <Link to="/repos"><FiGithub/>Repos</Link>
+        <Link to="/followers"><IoPeopleOutline/>Seguidores</Link>
+        <Link to="/following"><IoPeopleOutline/>Seguindo</Link>
       </nav>
     </div>
   )

@@ -14,3 +14,8 @@ header.header-following {
     justify-content: space-between;
     align-items: baseline;
 }
+svg {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}

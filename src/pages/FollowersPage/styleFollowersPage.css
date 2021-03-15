@@ -15,7 +15,7 @@ li.item-seguidor {
     padding: 20px 20px 20px 20px;
 }
 header.header-followers {
-    width: 375px;
+    width: 100%;
     display: flex;
     align-items: baseline;
     background: #1F1F1F;
@@ -24,4 +24,9 @@ header.header-followers {
 h2.qtd-seguidores {
     width: 225px;
     text-align: center;
+}
+svg {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
 }

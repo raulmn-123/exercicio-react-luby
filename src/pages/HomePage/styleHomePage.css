@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background: #292929;
-    width: 375px;
+    width: 100%;
 }
 button.ui.button {
     background: #FFCE00;

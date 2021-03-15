@@ -31,7 +31,7 @@ export default function HomePage() {
     }
   };
   return (
-    <div className="div">
+  
       
       <div className="div-principal">
         <Form onSubmit={handleSubmit}>
@@ -52,6 +52,6 @@ export default function HomePage() {
           </Form.Group>
         </Form>
       </div>
-    </div>
+    
   );
 }

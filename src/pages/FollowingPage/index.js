@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./styleFollowingPage.css";
 import {Link} from 'react-router-dom'
+import {AiOutlineHome,FiGithub,IoPeopleOutline, IoMdArrowBack} from 'react-icons/all'
 
 function FollowingPage() {
 
@@ -23,7 +24,7 @@ function FollowingPage() {
   return (
     <div className="conteudo-principal">
       <header className="header-following">
-        <a className="botao-voltar" href="/user">Voltar</a>
+        <a className="botao-voltar" href="/user"><IoMdArrowBack/></a>
         <h2 className="qtd-seguidores">{user.following} seguindo</h2>
       </header>
       <ul className="lista-seguidores">
@@ -45,10 +46,10 @@ function FollowingPage() {
 
       </ul>
       <nav className="barra-navegação">
-      <Link to="/">Home</Link>
-        <Link to="/repos">Repos</Link>
-        <Link to="/followers">Seguidores</Link>
-        <Link to="/following">Seguindo</Link>
+      <Link to="/"><AiOutlineHome/>Home</Link>
+        <Link to="/repos"><FiGithub/>Repos</Link>
+        <Link to="/followers"><IoPeopleOutline/>Seguidores</Link>
+        <Link to="/following"><IoPeopleOutline/>Seguindo</Link>
       </nav>
     </div>
   );

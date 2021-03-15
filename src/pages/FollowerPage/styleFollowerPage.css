@@ -3,11 +3,16 @@
     justify-content: space-evenly;
     align-items: center;
     background: #5252525D;
-    width: 375px;
+    width: 100%;
 }
 h2.title-bio {
     padding: 20px;
 }
 p.title-usuario {
     font-size: 1.3em;
+}
+svg {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
 }

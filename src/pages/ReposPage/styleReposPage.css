@@ -1,5 +1,5 @@
 header.header-repos {
-    width: 375px;
+    width: 100%;
     display: flex;
     align-items: baseline;
     background: #1F1F1F;
@@ -20,15 +20,19 @@ a.botao-voltar:hover {
 }
 ul.lista-repos {
     list-style: none;
-    padding: 0px 30px 0px 30px;
+    padding-left: 20px;
+    width: 100%;
 }
-li.item-repositorio {
-    margin-bottom: 10px;
-}
+
 h3.repo-name {
     color: white;
     font-weight: bold;
 }
 .descricao-repositorio {
     color: #c4c4c4;
+}
+svg {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
 }

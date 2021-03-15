@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import './styleFollowerPage.css'
 import axios from 'axios'
 import {useParams, Link} from 'react-router-dom'
+import {AiOutlineHome,FiGithub,IoPeopleOutline, IoMdArrowBack } from 'react-icons/all'
+
 function FollowerPage(){
 
     const {login} = useParams()
@@ -30,7 +32,7 @@ function FollowerPage(){
         #{follower.login}
         </p>
                <a className="sair" href="/user">
-          Voltar
+          <IoMdArrowBack/>
         </a>
       </header>
       <div className="div-logo">
@@ -65,10 +67,10 @@ function FollowerPage(){
         </div>
       </main>
       <nav className="barra-navegação">
-      <Link to="/">Home</Link>
-        <Link to="/repos">Repos</Link>
-        <Link to="/followers">Seguidores</Link>
-        <Link to="/following">Seguindo</Link>
+      <Link to="/"><AiOutlineHome/>Home</Link>
+        <Link to="/repos"><FiGithub/>Repos</Link>
+        <Link to="/followers"><IoPeopleOutline/>Seguidores</Link>
+        <Link to="/following"><IoPeopleOutline/>Seguindo</Link>
       </nav>
     </div>
     )

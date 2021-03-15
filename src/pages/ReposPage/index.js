@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./styleReposPage.css";
 import {Link} from 'react-router-dom'
+import {AiOutlineHome,FiGithub,IoPeopleOutline, IoMdArrowBack} from 'react-icons/all'
 
 function ReposPage() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -22,9 +23,9 @@ function ReposPage() {
   }, []);
 
   return (
-    <div className="conteudo-principal" style={{height: repos.length * 110}}>
+    <div className="conteudo-principal" >
       <header className="header-repos">
-        <a className="botao-voltar" href="/user">Voltar</a>
+        <a className="botao-voltar" href="/user"><IoMdArrowBack/></a>
         <h2 className="qtd-repos">{user.public_repos} repositórios</h2>
       </header>
       <ul className="lista-repos" >
@@ -41,10 +42,10 @@ function ReposPage() {
         })}
       </ul>
       <nav className="barra-navegação">
-      <Link to="/">Home</Link>
-        <Link to="/repos">Repos</Link>
-        <Link to="/followers">Seguidores</Link>
-        <Link to="/following">Seguindo</Link>
+      <Link to="/"><AiOutlineHome/>Home</Link>
+        <Link to="/repos"><FiGithub/>Repos</Link>
+        <Link to="/followers"><IoPeopleOutline/>Seguidores</Link>
+        <Link to="/following"><IoPeopleOutline/>Seguindo</Link>
       </nav>
     </div>
   );
